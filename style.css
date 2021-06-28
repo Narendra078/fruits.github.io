@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppin',sans-serif;
+}
+.bg{
+    /* background: #dd232f; */
+    background: #fc4a55;
+    overflow: hidden;
+}
+header{
+    position: relative;
+    top: 70px;
+    background: #fc4a55;
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+    box-shadow: 5px 5px 30px;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+nav{
+    position: relative;
+    top: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+nav ul{
+    display: flex;
+    margin-right: 40px;
+    z-index: 999;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: inline-block;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding-right: 30px;
+}
+.side-design{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 80vh;
+    background:  rgba(0,0,0,0.1);
+}
+.content{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.textbox{
+    color: #fff;
+    position: relative;
+    top: 50px;
+}
+.textbox h2{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 1.5rem;
+}
+.textbox p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 85%;
+}
+.imgbox{
+    position: relative;
+    top: 60px;
+    right: 30px;
+}
+.imgbox img{
+    width: 140%;
+}
+.btn{
+    width: 20%;
+    padding: 10px 30px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.thumb{
+    position: absolute;
+    left: 20%;
+    transform: translateX(-30%);
+    bottom: 10px;
+    display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.25);
+    padding: 5px;
+}
+.thumb li.active{
+    border: 2px solid rgba(255,255,255,1);
+}
+.thumb li::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 200px;
+    top: -130px;
+    font-size: 5.8rem;
+    color: rgba(0,0,0,0.15);
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+}
+.thumb li.active::before{
+    opacity: 1;
+}
+.thumb li img{
+    max-width: 50px;
+}
